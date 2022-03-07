@@ -160,7 +160,7 @@ agreeFrecuency = sidebar.checkbox("Frecuencia por trabajo ",key = "frecuencia")
 if agreeFrecuency:
   fig, ax = plt.subplots()
 
-  ax.hist(data['Unit'], rwidth=0.85)
+  ax.hist(data['Unit'],color = "#E74C3C", rwidth=0.85)
   ax.set_xlabel("Trabajo")
   ax.set_ylabel("Numero de empleados")
   st.header("Frecuencia de Empleados por Trabajo ")
@@ -177,7 +177,7 @@ if agreeDesercion:
   y_pos = data['Attrition_rate']
   x_pos = data['Hometown']
 
-  ax.bar(x_pos, y_pos)
+  ax.bar(x_pos, y_pos,color = "#76448A")
   ax.set_ylabel("Desercion")
   ax.set_xlabel("Ciudad natal")
   ax.set_title('¿Cuantos empleados desertaron por ciudad?')
@@ -197,7 +197,7 @@ if agreeEdad:
   y_pos = data['Attrition_rate']
   x_pos = data['Age']
 
-  ax.barh(x_pos, y_pos)
+  ax.barh(x_pos, y_pos, color = "#229954")
   ax.set_xlabel("Desercion")
   ax.set_ylabel("Edad")
   ax.set_title('¿Cuantos empleados desertaron por edad?')
@@ -217,7 +217,7 @@ if agreeService:
   y_pos = data['Attrition_rate']
   x_pos = data['Time_of_service']
 
-  ax.bar(x_pos, y_pos)
+  ax.bar(x_pos, y_pos, color = "#DF39DD")
   ax.set_ylabel("Desercion")
   ax.set_xlabel("Tiempo de servicio")
   ax.set_title('¿Cuantos empleados desertaron por tiempo de servicio?')
