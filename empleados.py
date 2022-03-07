@@ -140,12 +140,13 @@ if (btnFilterByUnit):
 sidebar.markdown("___")
 
 sidebar.subheader("Graficas")
+
 # histograma edades 
 agreeHis = sidebar.checkbox("Histograma de edades ",key = "edades")
 if agreeHis:
   fig, ax = plt.subplots()
 
-  ax.hist(data['Age'], rwidth=0.85)
+  ax.hist(data['Age'], color='#F2AB6D', rwidth=0.85)
   ax.set_xlabel("Edad")
   ax.set_ylabel("Numero de empleados")
   st.header("Histograma de empleados por edad")
